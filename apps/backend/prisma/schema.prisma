@@ -1,0 +1,138 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum EmailJobStatus {
+  PENDING
+  SCHEDULED
+  PROCESSING
+  SENT
+  FAILED
+  CANCELLED
+}
+
+enum SenderStatus {
+  ACTIVE
+  INACTIVE
+}
+
+enum CampaignStatus {
+  DRAFT
+  ACTIVE
+  PAUSED
+  COMPLETED
+}
+
+model User {
+  id            String    @id @default(cuid())
+  googleId      String    @unique
+  email         String    @unique
+  name          String?
+  picture       String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  senders       Sender[]
+  campaigns     Campaign[]
+  sessions      Session[]
+
+  @@index([googleId])
+  @@index([email])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  userId       String
+  sessionToken String   @unique
+  expiresAt    DateTime
+  createdAt    DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([sessionToken])
+  @@index([userId])
+}
+
+model Sender {
+  id          String        @id @default(cuid())
+  userId      String
+  email       String
+  name        String?
+  status      SenderStatus  @default(ACTIVE)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  user        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  emailJobs   EmailJob[]
+  campaigns   Campaign[]
+
+  @@unique([userId, email])
+  @@index([userId])
+  @@index([email])
+}
+
+model Campaign {
+  id          String          @id @default(cuid())
+  userId      String
+  senderId    String?
+  name        String
+  subject     String
+  status      CampaignStatus  @default(DRAFT)
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+
+  user        User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sender      Sender?         @relation(fields: [senderId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+  @@index([senderId])
+  @@index([status])
+}
+
+model EmailJob {
+  id              String        @id @default(cuid())
+  campaignId      String?
+  senderId        String
+  recipient       String
+  subject         String
+  body            String        @db.Text
+  scheduledAt     DateTime
+  status          EmailJobStatus @default(PENDING)
+  attempts        Int           @default(0)
+  sentAt          DateTime?
+  failedAt        DateTime?
+  lastError       String?       @db.Text
+  idempotencyKey  String        @unique
+  delayMs         Int           @default(0)
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  sender          Sender        @relation(fields: [senderId], references: [id], onDelete: Cascade)
+  attachments     Attachment[]
+
+  @@index([campaignId])
+  @@index([senderId])
+  @@index([status])
+  @@index([scheduledAt])
+  @@index([idempotencyKey])
+  @@index([recipient])
+}
+
+model Attachment {
+  id          String   @id @default(cuid())
+  emailJobId  String
+  filename    String
+  contentType String?
+  size        Int?
+  url         String?
+  createdAt   DateTime @default(now())
+
+  emailJob    EmailJob @relation(fields: [emailJobId], references: [id], onDelete: Cascade)
+
+  @@index([emailJobId])
+}

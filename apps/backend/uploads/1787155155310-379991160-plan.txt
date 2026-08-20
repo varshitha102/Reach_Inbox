@@ -1,0 +1,829 @@
+Yes. I gave you **23 major DSA sections**.
+
+But if you're asking **how many individual things/checkpoints** are in the roadmap, it's roughly **250+ concepts, algorithms, patterns, and problem types**. That's too messy for tracking if we keep it as one giant list.
+
+For Notion, use this as your **master DSA tracker**. Each line is one checkbox. You can copy-paste it directly.
+
+# JAVA DSA — MASTER TRACKER
+
+## 00 — JAVA & DSA FOUNDATIONS
+
+* [ ] Java syntax
+* [ ] Variables & data types
+* [ ] Loops
+* [ ] Methods
+* [ ] Classes & objects
+* [ ] References
+* [ ] Arrays
+* [ ] Strings
+* [ ] StringBuilder
+* [ ] Generics
+* [ ] ArrayList
+* [ ] HashMap
+* [ ] HashSet
+* [ ] ArrayDeque
+* [ ] PriorityQueue
+* [ ] Arrays.sort()
+* [ ] Collections.sort()
+* [ ] Big-O notation
+* [ ] Time complexity
+* [ ] Space complexity
+* [ ] Amortized complexity
+
+---
+
+# 01 — ARRAYS
+
+### Fundamentals
+
+* [ ] Array traversal
+* [ ] Array insertion
+* [ ] Array deletion
+* [ ] Find minimum
+* [ ] Find maximum
+* [ ] Frequency counting
+* [ ] Reverse array
+* [ ] Rotate array
+* [ ] Merge arrays
+* [ ] 2D arrays
+* [ ] Matrix traversal
+
+### Algorithms / Patterns
+
+* [ ] Prefix Sum
+* [ ] Suffix Sum
+* [ ] Difference Array
+* [ ] Kadane's Algorithm
+* [ ] Two Pointer
+* [ ] Sliding Window
+* [ ] Dutch National Flag
+* [ ] Moore's Voting Algorithm
+* [ ] Merge Intervals
+* [ ] Cyclic Sort
+
+### Problems
+
+* [ ] Two Sum
+* [ ] Best Time to Buy and Sell Stock
+* [ ] Maximum Subarray
+* [ ] Product of Array Except Self
+* [ ] Maximum Product Subarray
+* [ ] Rotate Array
+* [ ] Merge Intervals
+* [ ] Insert Interval
+* [ ] 3Sum
+* [ ] 4Sum
+* [ ] Container With Most Water
+* [ ] Trapping Rain Water
+
+---
+
+# 02 — STRINGS
+
+### Fundamentals
+
+* [ ] String traversal
+* [ ] Character frequency
+* [ ] ASCII basics
+* [ ] Unicode basics
+* [ ] StringBuilder
+* [ ] Palindrome
+* [ ] Anagram
+* [ ] Substring
+* [ ] Subsequence
+* [ ] String comparison
+
+### Algorithms / Patterns
+
+* [ ] Two Pointer
+* [ ] Sliding Window
+* [ ] String Hashing
+* [ ] KMP
+* [ ] Rabin-Karp
+* [ ] Z Algorithm
+
+### Problems
+
+* [ ] Valid Anagram
+* [ ] Valid Palindrome
+* [ ] Longest Substring Without Repeating Characters
+* [ ] Longest Repeating Character Replacement
+* [ ] Minimum Window Substring
+* [ ] Group Anagrams
+* [ ] Longest Palindromic Substring
+* [ ] Palindromic Substrings
+
+---
+
+# 03 — SEARCHING
+
+* [ ] Linear Search
+* [ ] Binary Search
+* [ ] Binary Search Template
+* [ ] Lower Bound
+* [ ] Upper Bound
+* [ ] Floor
+* [ ] Ceiling
+* [ ] Binary Search on Answer
+* [ ] Search in Rotated Sorted Array
+* [ ] Find Peak Element
+* [ ] Find Minimum in Rotated Array
+
+### Problems
+
+* [ ] Binary Search
+* [ ] First and Last Position
+* [ ] Search Rotated Array
+* [ ] Find Minimum Rotated Array
+* [ ] Koko Eating Bananas
+* [ ] Capacity to Ship Packages
+* [ ] Median of Two Sorted Arrays
+
+---
+
+# 04 — SORTING
+
+### Basic
+
+* [ ] Bubble Sort
+* [ ] Selection Sort
+* [ ] Insertion Sort
+
+### Important
+
+* [ ] Merge Sort
+* [ ] Quick Sort
+* [ ] Heap Sort
+* [ ] Counting Sort
+* [ ] Radix Sort
+
+### Concepts
+
+* [ ] Stable vs unstable sorting
+* [ ] In-place sorting
+* [ ] Comparison sorting
+* [ ] Divide and Conquer sorting
+
+### Problems
+
+* [ ] Sort Colors
+* [ ] Merge Sorted Arrays
+* [ ] Count Inversions
+* [ ] Kth Largest Element
+
+---
+
+# 05 — LINKED LIST
+
+### Fundamentals
+
+* [ ] Singly Linked List
+* [ ] Doubly Linked List
+* [ ] Circular Linked List
+* [ ] Insert node
+* [ ] Delete node
+* [ ] Search node
+* [ ] Reverse list
+* [ ] Find middle
+* [ ] Detect cycle
+* [ ] Remove cycle
+
+### Algorithms / Patterns
+
+* [ ] Fast & Slow Pointer
+* [ ] Floyd Cycle Detection
+* [ ] In-place reversal
+* [ ] Merge sorted lists
+
+### Problems
+
+* [ ] Reverse Linked List
+* [ ] Middle of Linked List
+* [ ] Linked List Cycle
+* [ ] Remove Nth Node From End
+* [ ] Merge Two Sorted Lists
+* [ ] Reorder List
+* [ ] Intersection of Two Linked Lists
+* [ ] Palindrome Linked List
+* [ ] Reverse Nodes in K Group
+* [ ] Copy List With Random Pointer
+* [ ] LRU Cache
+
+---
+
+# 06 — STACK
+
+### Fundamentals
+
+* [ ] Stack using array
+* [ ] Stack using linked list
+* [ ] Java Stack
+* [ ] Java Deque as Stack
+* [ ] Push
+* [ ] Pop
+* [ ] Peek
+
+### Algorithms
+
+* [ ] Monotonic Stack
+* [ ] Next Greater Element
+* [ ] Next Smaller Element
+* [ ] Previous Greater Element
+* [ ] Previous Smaller Element
+
+### Problems
+
+* [ ] Valid Parentheses
+* [ ] Min Stack
+* [ ] Evaluate Reverse Polish Notation
+* [ ] Daily Temperatures
+* [ ] Next Greater Element
+* [ ] Largest Rectangle in Histogram
+* [ ] Trapping Rain Water
+
+---
+
+# 07 — QUEUE / DEQUE
+
+* [ ] Queue
+* [ ] Queue using array
+* [ ] Queue using linked list
+* [ ] Circular Queue
+* [ ] Deque
+* [ ] Priority Queue
+* [ ] Monotonic Queue
+* [ ] Java ArrayDeque
+
+### Problems
+
+* [ ] Sliding Window Maximum
+* [ ] Number of Islands
+* [ ] Rotting Oranges
+* [ ] Binary Tree Level Order Traversal
+
+---
+
+# 08 — HASHING
+
+### Fundamentals
+
+* [ ] Hashing concept
+* [ ] Hash function
+* [ ] hashCode()
+* [ ] equals()
+* [ ] Collision
+* [ ] HashMap
+* [ ] HashSet
+* [ ] Frequency Map
+* [ ] HashSet Lookup
+* [ ] HashMap Lookup
+
+### Patterns
+
+* [ ] Frequency Map Pattern
+* [ ] Prefix Sum + HashMap
+* [ ] Complement Lookup
+* [ ] Counting Pattern
+
+### Problems
+
+* [ ] Two Sum
+* [ ] Contains Duplicate
+* [ ] Group Anagrams
+* [ ] Longest Consecutive Sequence
+* [ ] Subarray Sum Equals K
+* [ ] Longest Subarray With Sum K
+* [ ] Isomorphic Strings
+* [ ] Happy Number
+
+---
+
+# 09 — RECURSION
+
+* [ ] Base Case
+* [ ] Recursive Case
+* [ ] Call Stack
+* [ ] Recursion Tree
+* [ ] Tail Recursion
+* [ ] Multiple Recursion
+* [ ] Recursion + Arrays
+* [ ] Recursion + Strings
+* [ ] Recursion + Trees
+* [ ] Recursion + Backtracking
+
+### Problems
+
+* [ ] Factorial
+* [ ] Fibonacci
+* [ ] Power
+* [ ] Reverse String
+* [ ] Generate Subsets
+* [ ] Generate Permutations
+* [ ] Generate Combinations
+
+---
+
+# 10 — BACKTRACKING
+
+* [ ] Backtracking Template
+* [ ] Choose
+* [ ] Explore
+* [ ] Unchoose
+* [ ] Decision Tree
+* [ ] Pruning
+* [ ] Subsets
+* [ ] Permutations
+* [ ] Combinations
+
+### Problems
+
+* [ ] Subsets
+* [ ] Subsets II
+* [ ] Permutations
+* [ ] Combination Sum
+* [ ] Letter Combinations
+* [ ] Generate Parentheses
+* [ ] N-Queens
+* [ ] Sudoku Solver
+* [ ] Word Search
+* [ ] Rat in a Maze
+
+---
+
+# 11 — BINARY TREES
+
+### Fundamentals
+
+* [ ] Tree terminology
+* [ ] Root
+* [ ] Parent
+* [ ] Child
+* [ ] Leaf
+* [ ] Height
+* [ ] Depth
+* [ ] Level
+* [ ] Binary Tree
+
+### Traversals
+
+* [ ] Preorder
+* [ ] Inorder
+* [ ] Postorder
+* [ ] Level Order
+* [ ] Recursive Traversal
+* [ ] Iterative Traversal
+* [ ] Morris Traversal
+
+### Algorithms
+
+* [ ] Tree Height
+* [ ] Tree Diameter
+* [ ] Check Balanced Tree
+* [ ] Lowest Common Ancestor
+* [ ] Maximum Path Sum
+* [ ] Path Sum
+* [ ] Tree Views
+* [ ] Serialize / Deserialize
+
+### Problems
+
+* [ ] Maximum Depth
+* [ ] Invert Binary Tree
+* [ ] Diameter of Binary Tree
+* [ ] Balanced Binary Tree
+* [ ] Binary Tree Level Order
+* [ ] Zigzag Level Order
+* [ ] Lowest Common Ancestor
+* [ ] Binary Tree Maximum Path Sum
+* [ ] Serialize and Deserialize Binary Tree
+
+---
+
+# 12 — BINARY SEARCH TREE
+
+* [ ] BST Property
+* [ ] Search
+* [ ] Insert
+* [ ] Delete
+* [ ] Minimum
+* [ ] Maximum
+* [ ] Predecessor
+* [ ] Successor
+* [ ] Validate BST
+* [ ] LCA in BST
+* [ ] Kth Smallest
+
+### Problems
+
+* [ ] Validate BST
+* [ ] Search BST
+* [ ] Insert into BST
+* [ ] Delete Node
+* [ ] Kth Smallest Element
+* [ ] Lowest Common Ancestor
+
+---
+
+# 13 — HEAP / PRIORITY QUEUE
+
+### Fundamentals
+
+* [ ] Min Heap
+* [ ] Max Heap
+* [ ] Heap Property
+* [ ] Heapify
+* [ ] Build Heap
+* [ ] Insert
+* [ ] Delete
+* [ ] Extract Min
+* [ ] Extract Max
+* [ ] Heap Sort
+* [ ] Java PriorityQueue
+
+### Patterns
+
+* [ ] Top K
+* [ ] Kth Largest
+* [ ] Kth Smallest
+* [ ] Two Heaps
+* [ ] Merge K Sorted
+
+### Problems
+
+* [ ] Kth Largest Element
+* [ ] Top K Frequent Elements
+* [ ] Find Median From Data Stream
+* [ ] K Closest Points
+* [ ] Merge K Sorted Lists
+* [ ] Task Scheduler
+
+---
+
+# 14 — GREEDY
+
+### Algorithms
+
+* [ ] Greedy Strategy
+* [ ] Activity Selection
+* [ ] Interval Scheduling
+* [ ] Fractional Knapsack
+* [ ] Job Sequencing
+* [ ] Huffman Coding
+* [ ] Jump Game
+* [ ] Gas Station
+* [ ] Minimum Platforms
+
+### Concepts
+
+* [ ] Greedy Choice
+* [ ] Exchange Argument
+* [ ] Proving Greedy Correctness
+
+---
+
+# 15 — GRAPHS
+
+### Fundamentals
+
+* [ ] Graph terminology
+* [ ] Directed Graph
+* [ ] Undirected Graph
+* [ ] Weighted Graph
+* [ ] Unweighted Graph
+* [ ] Degree
+* [ ] Path
+* [ ] Cycle
+* [ ] Connected Components
+
+### Representation
+
+* [ ] Adjacency Matrix
+* [ ] Adjacency List
+* [ ] Edge List
+
+### Traversal
+
+* [ ] BFS
+* [ ] DFS
+* [ ] Recursive DFS
+* [ ] Iterative DFS
+* [ ] Multi-source BFS
+
+### Algorithms
+
+* [ ] Cycle Detection — Undirected
+* [ ] Cycle Detection — Directed
+* [ ] Connected Components
+* [ ] Flood Fill
+* [ ] Number of Islands
+* [ ] Bipartite Graph
+* [ ] Topological Sort
+* [ ] Kahn's Algorithm
+* [ ] Dijkstra
+* [ ] Bellman-Ford
+* [ ] Floyd-Warshall
+* [ ] Prim's Algorithm
+* [ ] Kruskal's Algorithm
+* [ ] Union-Find / DSU
+
+### Problems
+
+* [ ] Number of Islands
+* [ ] Clone Graph
+* [ ] Course Schedule
+* [ ] Pacific Atlantic Water Flow
+* [ ] Rotting Oranges
+* [ ] Word Ladder
+* [ ] Network Delay Time
+* [ ] Cheapest Flights
+* [ ] Accounts Merge
+
+---
+
+# 16 — DYNAMIC PROGRAMMING
+
+### Fundamentals
+
+* [ ] What is DP?
+* [ ] Overlapping Subproblems
+* [ ] Optimal Substructure
+* [ ] Recursion → Memoization
+* [ ] Memoization
+* [ ] Tabulation
+* [ ] Space Optimization
+* [ ] State Definition
+* [ ] Transition
+* [ ] Base Case
+
+### 1D DP
+
+* [ ] Fibonacci
+* [ ] Climbing Stairs
+* [ ] House Robber
+* [ ] Decode Ways
+
+### Knapsack
+
+* [ ] 0/1 Knapsack
+* [ ] Unbounded Knapsack
+* [ ] Subset Sum
+* [ ] Partition Equal Subset Sum
+* [ ] Coin Change
+
+### 2D DP
+
+* [ ] Unique Paths
+* [ ] Minimum Path Sum
+* [ ] Grid DP
+
+### String DP
+
+* [ ] Longest Common Subsequence
+* [ ] Longest Palindromic Subsequence
+* [ ] Edit Distance
+* [ ] Word Break
+
+### Advanced DP
+
+* [ ] Longest Increasing Subsequence
+* [ ] Matrix Chain Multiplication
+* [ ] Interval DP
+* [ ] DP on Trees
+* [ ] Bitmask DP
+
+---
+
+# 17 — TRIE
+
+* [ ] Trie Concept
+* [ ] Trie Node
+* [ ] Insert
+* [ ] Search
+* [ ] Delete
+* [ ] Prefix Search
+* [ ] Autocomplete
+* [ ] Word Dictionary
+* [ ] Word Search
+
+---
+
+# 18 — BIT MANIPULATION
+
+### Fundamentals
+
+* [ ] Binary Representation
+* [ ] AND
+* [ ] OR
+* [ ] XOR
+* [ ] NOT
+* [ ] Left Shift
+* [ ] Right Shift
+* [ ] Set Bit
+* [ ] Clear Bit
+* [ ] Toggle Bit
+* [ ] Check Bit
+* [ ] Count Set Bits
+* [ ] Power of 2
+* [ ] Bitmask
+
+### Algorithms
+
+* [ ] Brian Kernighan's Algorithm
+* [ ] XOR Single Number
+* [ ] XOR Missing Number
+* [ ] Bitmask Subsets
+
+---
+
+# 19 — ADVANCED DATA STRUCTURES
+
+**Do these after the core DSA is strong.**
+
+* [ ] Segment Tree
+* [ ] Lazy Propagation
+* [ ] Fenwick Tree / Binary Indexed Tree
+* [ ] Sparse Table
+* [ ] AVL Tree
+* [ ] Red-Black Tree
+* [ ] B Tree
+* [ ] B+ Tree
+* [ ] Skip List
+* [ ] Suffix Array
+* [ ] Suffix Tree
+
+---
+
+# 20 — ADVANCED ALGORITHMS
+
+* [ ] Divide and Conquer
+* [ ] Meet in the Middle
+* [ ] Randomized Algorithms
+* [ ] Sweep Line
+* [ ] Coordinate Compression
+* [ ] Line Sweep + Heap
+* [ ] Offline Queries
+* [ ] Topological DP
+* [ ] Shortest Path Algorithms
+* [ ] Minimum Spanning Tree
+* [ ] Network Flow basics
+
+---
+
+# 21 — INTERVIEW PATTERNS
+
+This section is **critical**. Don't just learn individual algorithms.
+
+* [ ] Two Pointers
+* [ ] Sliding Window
+* [ ] Fast & Slow Pointers
+* [ ] Prefix Sum
+* [ ] Difference Array
+* [ ] HashMap / Frequency Map
+* [ ] Binary Search
+* [ ] Binary Search on Answer
+* [ ] Sorting + Greedy
+* [ ] Merge Intervals
+* [ ] Monotonic Stack
+* [ ] Monotonic Queue
+* [ ] Top K / Heap
+* [ ] Two Heaps
+* [ ] BFS
+* [ ] DFS
+* [ ] Multi-source BFS
+* [ ] Backtracking
+* [ ] Divide and Conquer
+* [ ] Dynamic Programming
+* [ ] Union-Find
+* [ ] Topological Sort
+* [ ] Shortest Path
+* [ ] Minimum Spanning Tree
+* [ ] Bit Manipulation
+
+---
+
+# 22 — INTERVIEW PRACTICE
+
+### Easy
+
+* [ ] Solve 30 Easy problems
+* [ ] Arrays
+* [ ] Strings
+* [ ] Hashing
+* [ ] Linked List
+* [ ] Stack
+* [ ] Binary Search
+
+### Medium
+
+* [ ] Solve 100 Medium problems
+* [ ] Arrays
+* [ ] Strings
+* [ ] Sliding Window
+* [ ] Two Pointer
+* [ ] Hashing
+* [ ] Binary Search
+* [ ] Linked List
+* [ ] Trees
+* [ ] Heap
+* [ ] Graphs
+* [ ] Greedy
+* [ ] Backtracking
+* [ ] DP
+
+### Hard
+
+* [ ] Solve 20+ Hard problems
+* [ ] Hard Arrays
+* [ ] Hard Strings
+* [ ] Hard Trees
+* [ ] Hard Graphs
+* [ ] Hard DP
+* [ ] Advanced problems
+
+---
+
+# 23 — FINAL INTERVIEW SKILLS
+
+* [ ] Solve without IDE autocomplete
+* [ ] Explain brute force first
+* [ ] Optimize brute force
+* [ ] Explain time complexity
+* [ ] Explain space complexity
+* [ ] Write clean Java
+* [ ] Handle edge cases
+* [ ] Test manually
+* [ ] Debug without panic
+* [ ] Explain solution while coding
+* [ ] Solve under time pressure
+* [ ] Mock interviews
+* [ ] Revise failed problems
+* [ ] Re-solve previously solved problems without looking
+* [ ] Build personal pattern notes
+
+---
+
+## Your priority order
+
+If you want the **highest ROI**, this is the order:
+
+```text
+FOUNDATIONS
+↓
+ARRAYS
+↓
+STRINGS
+↓
+TWO POINTERS
+↓
+SLIDING WINDOW
+↓
+HASHING
+↓
+BINARY SEARCH
+↓
+SORTING
+↓
+LINKED LIST
+↓
+STACK
+↓
+QUEUE / DEQUE
+↓
+RECURSION
+↓
+BACKTRACKING
+↓
+BINARY TREE
+↓
+BST
+↓
+HEAP
+↓
+GREEDY
+↓
+GRAPHS
+↓
+BIT MANIPULATION
+↓
+DYNAMIC PROGRAMMING
+↓
+TRIE
+↓
+ADVANCED DSA
+↓
+INTERVIEW PRACTICE
+```
+
+### Total
+
+This tracker contains **23 sections** and roughly **300 individual checkpoints** when concepts, algorithms, patterns, and practice categories are counted.
+
+But here's the important distinction:
+
+**300 checkboxes ≠ 300 things you need to memorize.**
+
+Your real objective is to get to the point where, when you see a new problem, you can say:
+
+> "This looks like sliding window / binary search / prefix sum / DFS / heap / DP..."
+
+**That pattern-recognition skill is what gets you through interviews.**
