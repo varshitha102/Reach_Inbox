@@ -81,7 +81,7 @@ export class UploadController {
 
       // Upload to Railway Storage
       const command = new PutObjectCommand({
-        Bucket: process.env.BUCKET_NAME,
+        Bucket: process.env.RAILWAY_BUCKET_NAME,
         Key: key,
         Body: file.buffer,
         ContentType: file.mimetype,
@@ -91,7 +91,7 @@ export class UploadController {
 
       // Generate download URL
       const getCommand = new GetObjectCommand({
-        Bucket: process.env.BUCKET_NAME,
+        Bucket: process.env.RAILWAY_BUCKET_NAME,
         Key: key,
       });
 
