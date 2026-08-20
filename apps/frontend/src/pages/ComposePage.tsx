@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { ArrowLeft, Paperclip, Clock, Send, X, Users } from 'lucide-react';
+import { ArrowLeft, Paperclip, Send, X, Users } from 'lucide-react';
 import { RecipientInput } from '../components/RecipientInput/RecipientInput';
 import { RichTextEditor } from '../components/RichTextEditor/RichTextEditor';
 import { emailJobsApi } from '../api/emailJobs';
