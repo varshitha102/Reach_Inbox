@@ -12,12 +12,29 @@ export default function EmailDetailPage() {
   const navigate = useNavigate();
   const [selectedAttachment, setSelectedAttachment] = useState<any>(null);
 
+  console.log('=== EMAIL DETAIL PAGE DEBUG ===');
+  console.log('Email ID from URL:', id);
+
   const { data: emailJob, isLoading, error, refetch } = useQuery({
     queryKey: ['email-job', id],
     queryFn: () => emailJobsApi.getById(id!),
     enabled: !!id,
     retry: false,
   });
+
+  console.log('Query state:', { isLoading, error, hasData: !!emailJob });
+  if (emailJob) {
+    console.log('Email job data received:', JSON.stringify({
+      id: emailJob.id,
+      subject: emailJob.subject,
+      recipient: emailJob.recipient,
+      status: emailJob.status,
+      hasAttachments: !!emailJob.attachments,
+      attachmentsCount: emailJob.attachments?.length || 0,
+      attachments: emailJob.attachments
+    }, null, 2));
+  }
+  console.log('=== END EMAIL DETAIL PAGE DEBUG ===');
 
   if (isLoading) {
     return <LoadingState />;

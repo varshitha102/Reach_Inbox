@@ -39,15 +39,36 @@ export class EmailJobController {
   static async getById(req: Request, res: Response): Promise<void> {
     try {
       const { id } = req.params;
+      console.log('=== GET EMAIL JOB DEBUG ===');
+      console.log('Email ID requested:', id);
+      console.log('User ID:', req.user!.id);
+      
       const emailJob = await EmailJobService.getEmailJob(id, req.user!.id);
       
+      console.log('Email job found:', !!emailJob);
+      if (emailJob) {
+        console.log('Email job data:', JSON.stringify({
+          id: emailJob.id,
+          subject: emailJob.subject,
+          recipient: emailJob.recipient,
+          status: emailJob.status,
+          hasAttachments: !!emailJob.attachments,
+          attachmentsCount: emailJob.attachments?.length || 0,
+          attachments: emailJob.attachments
+        }, null, 2));
+      }
+      
       if (!emailJob) {
+        console.log('Email job not found, returning 404');
         res.status(404).json({ error: 'Email job not found' });
         return;
       }
 
+      console.log('Returning email job data');
+      console.log('=== END GET EMAIL JOB DEBUG ===');
       res.json(emailJob);
     } catch (error: any) {
+      console.error('Error in getById:', error);
       res.status(500).json({ error: error.message });
     }
   }
