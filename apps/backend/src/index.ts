@@ -8,6 +8,7 @@ import { EmailSenderService } from './services/emailSenderService.js';
 import { EmailQueue } from './queue/queue.js';
 import { logger } from './utils/logger.js';
 import routes from './routes/index.js';
+import { initializeSupabase } from './services/supabaseService.js';
 
 const app = express();
 
@@ -59,6 +60,8 @@ async function startServer() {
     await EmailSenderService.initialize();
     logger.info('SMTP transporter verified successfully');
     console.log('✓ SMTP initialized');
+
+    initializeSupabase();
 
     server = app.listen(config.port, '0.0.0.0', () => {
       logger.info(`API server running on port ${config.port}`);

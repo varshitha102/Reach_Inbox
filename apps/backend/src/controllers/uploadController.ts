@@ -1,25 +1,19 @@
 
 import { Request, Response } from 'express';
-import { createClient } from '@supabase/supabase-js';
-
-// Initialize Supabase client
-console.log('=== SUPABASE STORAGE INITIALIZATION ===');
-console.log('SUPABASE_URL present:', !!process.env.SUPABASE_URL);
-console.log('SUPABASE_ANON_KEY present:', !!process.env.SUPABASE_ANON_KEY);
-console.log('SUPABASE_URL:', process.env.SUPABASE_URL ? process.env.SUPABASE_URL.substring(0, 20) + '...' : 'not set');
-
-const supabase = createClient(
-  process.env.SUPABASE_URL || '',
-  process.env.SUPABASE_ANON_KEY || ''
-);
-
-console.log('Supabase client initialized');
-console.log('=== END SUPABASE STORAGE INITIALIZATION ===');
+import { getSupabaseClient } from '../services/supabaseService.js';
 
 export class UploadController {
   static async uploadFile(req: Request & { file?: Express.Multer.File }, res: Response): Promise<void> {
     console.log('=== FILE UPLOAD DEBUG ===');
     try {
+      const supabase = getSupabaseClient();
+      
+      if (!supabase) {
+        console.error('Supabase client not initialized');
+        res.status(500).json({ error: 'Supabase client not initialized' });
+        return;
+      }
+
       if (!req.file) {
         console.log('No file uploaded');
         res.status(400).json({ error: 'No file uploaded' });
