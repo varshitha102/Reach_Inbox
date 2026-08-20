@@ -26,7 +26,10 @@ class ApiClient {
     endpoint: string,
     options: RequestInit = {}
   ): Promise<T> {
-    const url = `${this.baseUrl}${endpoint}`;
+    // Remove trailing slash from baseUrl and leading slash from endpoint to avoid double slashes
+    const baseUrl = this.baseUrl.replace(/\/$/, '');
+    const cleanEndpoint = endpoint.replace(/^\//, '');
+    const url = `${baseUrl}/${cleanEndpoint}`;
     const headers: HeadersInit = {
       'Content-Type': 'application/json',
     };
