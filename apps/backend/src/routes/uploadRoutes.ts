@@ -4,7 +4,7 @@ import { UploadController } from '../controllers/uploadController.js';
 
 const router = Router();
 
-// Configure multer for memory storage (for Railway Storage upload)
+// Configure multer for memory storage (for Supabase upload)
 const upload = multer({
   storage: multer.memoryStorage(),
   limits: {
@@ -12,13 +12,7 @@ const upload = multer({
   },
 });
 
-// Generate presigned upload URL (client uploads directly to Railway Storage)
-router.post('/upload-url', UploadController.getUploadUrl);
-
-// Generate presigned download URL
-router.get('/download-url/:key', UploadController.getDownloadUrl);
-
-// Upload file via backend (for compatibility with existing frontend)
+// Upload file via backend to Supabase
 router.post('/upload', upload.single('file'), UploadController.uploadFile);
 
 export default router;
