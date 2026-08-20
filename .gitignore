@@ -9,8 +9,7 @@ apps/*/build
 # Docker
 *.env
 
-# Prisma
-prisma/migrations
+
 
 # Logs
 *.log
