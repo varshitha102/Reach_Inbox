@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const API_URL = import.meta.env.VITE_API_URL || 'https://reachinbox-production-8d17.up.railway.app';
 
 class ApiClient {
   private baseUrl: string;
