@@ -45,17 +45,29 @@ let server: any;
 
 async function startServer() {
   try {
+    console.log('=== BACKEND STARTUP DEBUG ===');
+    console.log('Starting server initialization...');
+    console.log('PORT:', config.port);
+    console.log('NODE_ENV:', config.nodeEnv);
+    console.log('DATABASE_URL configured:', !!process.env.DATABASE_URL);
+    console.log('REDIS_URL configured:', !!process.env.REDIS_URL);
+    
     await connectDatabase();
     logger.info('Database connected successfully');
+    console.log('✓ Database connected');
     
     await EmailSenderService.initialize();
     logger.info('SMTP transporter verified successfully');
+    console.log('✓ SMTP initialized');
 
     server = app.listen(config.port, '0.0.0.0', () => {
       logger.info(`API server running on port ${config.port}`);
+      console.log(`✓ Server listening on port ${config.port}`);
+      console.log('=== BACKEND STARTUP COMPLETE ===');
     });
   } catch (error) {
     logger.error('Failed to start server', { error });
+    console.error('✗ Server startup failed:', error);
     process.exit(1);
   }
 }

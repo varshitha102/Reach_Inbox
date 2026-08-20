@@ -11,9 +11,26 @@ router.get(
   '/google/callback',
   passport.authenticate('google', { session: false }),
   async (req: any, res) => {
-    const sessionToken = await AuthController.createSession(req.user.id, res);
+    console.log('=== BACKEND OAUTH CALLBACK DEBUG ===');
+    console.log('User authenticated:', !!req.user);
+    console.log('User ID:', req.user?.id);
+    console.log('User email:', req.user?.email);
+    console.log('FRONTEND_URL:', process.env.FRONTEND_URL);
     
-    res.redirect(`${process.env.FRONTEND_URL}/auth/callback?token=${sessionToken}`);
+    try {
+      const sessionToken = await AuthController.createSession(req.user.id, res);
+      console.log('Session token created successfully');
+      console.log('Token length:', sessionToken?.length || 0);
+      
+      const redirectUrl = `${process.env.FRONTEND_URL}/auth/callback?token=${sessionToken}`;
+      console.log('Redirecting to:', redirectUrl);
+      
+      res.redirect(redirectUrl);
+    } catch (error) {
+      console.error('Error creating session:', error);
+      res.status(500).json({ error: 'Failed to create session' });
+    }
+    console.log('=== END BACKEND OAUTH CALLBACK DEBUG ===');
   }
 );
 

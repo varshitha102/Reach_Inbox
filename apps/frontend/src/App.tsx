@@ -16,17 +16,31 @@ function AuthCallback() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log('=== FRONTEND AUTH CALLBACK DEBUG ===');
+    console.log('Current URL:', window.location.href);
+    console.log('Pathname:', location.pathname);
+    console.log('Search params:', location.search);
+    
     const params = new URLSearchParams(location.search);
     const token = params.get('token');
+    console.log('Token present:', !!token);
+    console.log('Token length:', token?.length || 0);
+    console.log('VITE_API_URL:', import.meta.env.VITE_API_URL);
+    
     if (token) {
+      console.log('Setting token in API client');
       api.setToken(token);
+      console.log('Token set successfully');
       // Small delay to ensure token is set before navigation
       setTimeout(() => {
+        console.log('Navigating to dashboard');
         navigate('/dashboard');
       }, 100);
     } else {
+      console.log('No token found, redirecting to login');
       navigate('/login');
     }
+    console.log('=== END FRONTEND AUTH CALLBACK DEBUG ===');
   }, [location, navigate]);
 
   return <LoadingState />;

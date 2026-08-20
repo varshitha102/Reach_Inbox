@@ -14,6 +14,7 @@ export class EmailSenderService {
 
   static async initialize(): Promise<void> {
     try {
+      console.log('EmailSenderService initialization');
       // Debug logging
       const smtpPass = process.env.SMTP_PASS || process.env.SMTP_PASSWORD;
       logger.info('EmailSenderService initialization', {
@@ -27,6 +28,7 @@ export class EmailSenderService {
 
       if (this.testMode) {
         logger.info('EmailSenderService in TEST MODE - emails will not be sent');
+        console.log('✓ EmailSenderService in TEST MODE');
         return;
       }
 
@@ -38,9 +40,11 @@ export class EmailSenderService {
         });
         this.testMode = true;
         logger.info('EmailSenderService in TEST MODE - emails will not be sent');
+        console.log('✓ EmailSenderService in TEST MODE (no credentials)');
         return;
       }
 
+      console.log('Creating SMTP transporter...');
       this.transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST || 'smtp.ethereal.email',
         port: parseInt(process.env.SMTP_PORT || '587'),
@@ -51,9 +55,18 @@ export class EmailSenderService {
         },
       });
 
-      await this.transporter.verify();
+      console.log('Verifying SMTP connection with 10s timeout...');
+      // Add timeout to prevent hanging
+      await Promise.race([
+        this.transporter.verify(),
+        new Promise((_, reject) => 
+          setTimeout(() => reject(new Error('SMTP verification timeout')), 10000)
+        )
+      ]);
       logger.info('EmailSenderService initialized and SMTP verified');
+      console.log('✓ SMTP verified successfully');
     } catch (error) {
+      console.log('✗ SMTP verification failed, using TEST MODE');
       logger.warn('SMTP verification failed, falling back to TEST MODE', { error });
       this.testMode = true;
       logger.info('EmailSenderService in TEST MODE - emails will not be sent');
